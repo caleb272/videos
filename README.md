@@ -65,7 +65,7 @@ You may find it helpful to open two browsers / browser sessions so you can log i
 
 ## 2. Features
 - [ ] There is a commented out `imageUrl String?` field on the `Video` schema [model](./api/db/schema.prisma#L30). Uncomment that, run `yarn db:migrate`, and then add support for passing it to the `createVideo` and `updateVideo` mutations. Request the `imageUrl` field on the `/videos` [page](https://github.com/myria-us/videos/blob/main/web/src/components/Video/VideosCell/VideosCell.tsx#L8-L21) so you can display it as the video thumbnail when it has been set on a video
-- [ ] Add additional [ReactionType](https://github.com/myria-us/videos/blob/main/api/src/graphql/schema.sdl.ts#L2-L20) emoji(s).
+- [ ] Add additional [ReactionType](https://github.com/myria-us/videos/blob/main/api/src/graphql/schema.sdl.ts#L2-L20) emoji(s) to the schema and support showing them on the [video page](http:localhost:8910/video/1) so that users can react using them.
 - [ ] Add support for showing all the videos uploaded by a given user using a query param i.e. `/videos?userId=1` or on a dedicated page i.e. `/user/1`
 - [ ] Add support for showing all the videos with a given reaction using a query param i.e `/videos?reaction=Rofl` or on a dedicated page i.e. `/reaction/Rofl`
 
@@ -79,8 +79,8 @@ You may find it helpful to open two browsers / browser sessions so you can log i
 
 ## 3. Sharing your code
 When you are done with your bug fix and feature, please share the code as follows:
-1. Commit your changes and push the branch to **your fork of the repo**.
-2. [Create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) off of `main` **in your fork of the repo**.
+1. Commit your changes and push the branch to **your fork of the repo**. 
+2. [Create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) off of `yourrepo:main`. Please note this PR should be totally contained in **in your fork of the repo**, and should not show up as a PR visible on this repo. 
 3. Follow the link in the email where we sent you this challenge in order to schedule our follow up call. There will be a text field where you can share the url to the PR you just created.
 
 # Notes
