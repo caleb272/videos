@@ -36,7 +36,7 @@ Instructions on installing Yarn are [here](https://yarnpkg.com/getting-started/i
 ## Cloning and running the app
 1. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repo
 2. Clone it to your local machine
-3. Install deps and setup the [SQLite](https://www.sqlite.org/index.html) database
+3. Install deps and setup db
 ```
 cd videos
 git checkout -b <yourname>
