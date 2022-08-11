@@ -7,7 +7,7 @@ const Button = ({ onClick = null, to = null, children, className = '' }) => {
       {children}
     </button>
   ) : (
-    <Link className={className} to={to}>
+    <Link type="button" className={className} to={to}>
       {children}
     </Link>
   )

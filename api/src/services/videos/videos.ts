@@ -86,8 +86,8 @@ export const reactToVideo: MutationResolvers['reactToVideo'] = async (
   return video
 }
 
-export const deleteVideo: MutationResolvers['deleteVideo'] = ({ id }) => {
-  return db.video.delete(id)
+export const deleteVideo: MutationResolvers['deleteVideo'] = async ({ id }) => {
+    return db.video.delete({ where: { id } })
 }
 
 export const User: UserResolvers = {
