@@ -1,4 +1,4 @@
-import { routes, navigate } from '@redwoodjs/router'
+import { routes, navigate, Link } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
@@ -63,13 +63,13 @@ const Video = ({ video }) => {
       <VideoEmbed video={video} />
       <div>{video.description}</div>
       <div className="text-xs">
-        Posted by {video.user.email} on <Time datetime={video.createdAt} />
+        Posted by <Link className='text-blue-500' to={routes.usersVideos({ id: video.user.id })}>{video.user.email}</Link> on <Time datetime={video.createdAt} />
       </div>
       <Reactions className="mt-4" video={video} onClick={onReactionClick} />
       {isCurrentUser && (
         <div className="mt-4">
           <Button
-            className="ml-2 button"
+            className="ml-2"
             to={routes.editVideo({ id: video.id })}
           >Edit</Button>
           <Button

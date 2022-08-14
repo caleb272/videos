@@ -8,7 +8,9 @@ import type {
 
 import { db } from 'src/lib/db'
 
-export const videos: QueryResolvers['videos'] = () => {
+export const videos: QueryResolvers['videos'] = (data) => {
+    if (data.userId)
+        return db.video.findMany({ where: { userId: data.userId }}) 
   return db.video.findMany()
 }
 

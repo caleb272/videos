@@ -53,7 +53,7 @@ export const schema = gql`
   }
 
   type Query {
-    videos: [Video!]! @requireAuth
+    videos(userId: Int): [Video!]! @requireAuth
     video(id: Int!): Video @requireAuth
   }
 
