@@ -6,8 +6,8 @@ import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
 import Videos from 'src/components/Video/Videos'
 
 export const QUERY = gql`
-  query FindVideos {
-    videos {
+  query FindVideos($userId: Int) {
+    videos(userId: $userId) {
       id
       url
       title
@@ -24,7 +24,7 @@ export const Loading = () => <div>Loading...</div>
 
 export const Empty = () => {
   return (
-    <div className="rw-text-center">
+		<div className="rw-text-center">
       {'No videos yet. '}
       <Link to={routes.newVideo()} className="rw-link">
         {'Create one?'}
